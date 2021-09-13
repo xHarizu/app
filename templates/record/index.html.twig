@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title_record_list' }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title_record_list' }}</h1>
+    {% if data is defined and data|length %}
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ 'label_id' }}</th>
+                <th>{{ 'label_title' }}</th>
+                <th>{{ 'label_tags' }}</th>
+                <th scope="col">
+                    {{ 'label_actions' }}
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for item in data %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.tags|join(', ') }}</td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <a href="{{ url('record_show', {id: item.id}) }}" title="view">
+                            view
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>
+            {{ 'message_empty_list'|trans }}
+        </p>
+    {% endif %}
+{% endblock  %}

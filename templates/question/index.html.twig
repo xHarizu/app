@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'label_questions_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1 class="display-4 d-flex justify-content-center">{{ 'label_questions_list'|trans }}</h1>
+
+    {% if is_granted ('ROLE_ADMIN') %}
+        <a class="btn btn-outline-success" href="{{ url('question_create') }}" title="{{ 'label_question_create'|trans }}">
+            {{ 'label_question_create'|trans }}
+        </a>
+    {% endif %}
+
+    {% if pagination is defined and pagination.items|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'label_question'|trans, 'question.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_subject'|trans, 'question.subject') }}</th>
+                <th>{{ 'label_askedby'|trans }}</th>
+                <th>{{ 'label_category'|trans }}</th>
+                <th>{{ 'label_actions'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for question in pagination.items %}
+                <tr>
+                    <td>{{ question.id }}</td>
+                    <td>{{ question.subject }}</td>
+                    <td>{{ question.user.email }}</td>
+                    <td>{{ question.category.title }}</td>
+                    <td>
+                        <a class="btn btn-info" href="{{ url('question_show', {id: question.id}) }}" title="{{ 'question_view'|trans }}">
+                            {{ 'action_view'|trans }}
+                        </a>
+                        {% if is_granted ('ROLE_ADMIN') %}
+                        <a class="btn btn-info" href="{{ url('question_edit', {id: question.id}) }}" title="{{ 'action_edit'|trans }}">
+                            {{ 'action_edit'|trans }}
+                        </a>
+                            <a class="btn btn-info" href="{{ url('question_delete', {id: question.id}) }}" title="{{ 'action_delete'|trans }}">
+                                {{ 'action_delete'|trans }}
+                            </a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+    {% else %}
+        {% include 'default/_single_flash_message.html.twig' with {
+            type: 'warning',
+            message: 'message_empty_list'|trans
+        } %}
+    {% endif %}
+{% endblock  %}

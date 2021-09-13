@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title_category_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1 class="display-4 d-flex justify-content-center">{{ 'title_category_list'|trans }}</h1>
+    {% if is_granted ('ROLE_ADMIN') %}
+    <p>
+        <a  class="btn btn-outline-success"href="{{ url('category_create') }}" title="{{ 'create_category'|trans }}">
+            {{ 'category_create'|trans }}
+        </a>
+    </p>
+    {% endif %}
+    {% if pagination is defined and pagination.items|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'label_id'|trans, 'category.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_created_at'|trans, 'category.createdAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_updated_at'|trans, 'category.updatedAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label_title'|trans, 'category.title') }}</th>
+                <th>{{ 'label_actions'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for category in pagination.items %}
+                <tr>
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.createdAt|date('d/m/Y')}}</td>
+                    <td>{{ category.updatedAt|date('d/m/Y') }}</td>
+                    <td>{{ category.title }}</td>
+                    <td>
+                        <a class="btn btn-info" href="{{ url('category_show', {id: category.id}) }}" title="{{ 'action_view'|trans }}">
+                            {{ 'action_view'|trans }}
+                        </a>
+                        {% if is_granted ('ROLE_ADMIN') %}
+                        <a class="btn btn-info" href="{{ url('category_edit', {id: category.id}) }}" title="{{ 'action_edit'|trans }}">
+                            {{ 'action_edit'|trans }}
+                        </a>
+
+                        {% if not category.questions|length %}
+                        <a class="btn btn-info" href="{{ url('category_delete', {id: category.id}) }}" title="{{ 'action_delete'|trans }}">
+                            {{ 'action_delete'|trans }}
+                        </a>
+                        {% endif %}
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    {% else %}
+        <div class="messages">
+            {{ 'message_item_not_found'|trans }}
+        </div>
+    {% endif %}
+{% endblock %}

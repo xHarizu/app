@@ -1,0 +1,133 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'label_question'|trans({'%id%': question.id|default('')}) }} {{ questions.id }}
+{% endblock %}
+
+{% block body %}
+    <h1 class="display-4 d-flex justify-content-center">{{ 'label_question'|trans({'%id%': question.id|default('')}) }} {{ questions.id }}</h1>
+    {% if questions is defined and questions|length %}
+        <dl class="dl-horizontal">
+            <dt>{{ 'label_subject'|trans }}</dt>
+            <dd>{{ questions.subject }}</dd>
+            <dt>{{ 'label_question_text'|trans }}</dt>
+            <dd>{{  questions.text }}</dd>
+
+            {% if questions.answer|length %}
+                <dt class="d-flex p-3">{{ 'label_answers'|trans }}</dt>
+            {% endif %}
+        </dl>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <td>
+                        {{ 'answer_text'|trans }}
+                    </td>
+                    <td>
+                        {{ 'label_answeredby'|trans }}
+                    </td>
+                    <td>
+                        {{ '' }}
+                    </td>
+                    {% if is_granted ('ROLE_ADMIN') %}
+                    <td>
+                        {{ 'label_action'|trans }}
+                    </td>
+                    {% endif %}
+                </tr>
+                </thead>
+                {% for answer in answers %}
+                    <tr>
+                        {% if answer.question.id == questions.id and answer.isBest == 1 %}
+                        <td>
+                            {{ answer.answertext }}
+                        </td>
+                        <td>
+                            {{ answer.nick }}
+                        </td>
+                        <td class="table-success" >
+                            {{ 'best_answer'|trans }}
+                        </td>
+                            <td>
+                                {% if is_granted ('ROLE_ADMIN') %}
+                                    <a class="btn btn-info" href="{{ url('answer_edit', {id: answer.id}) }}" title="{{ 'label_answer_edit'|trans }}">
+                                        {{ 'label_answer_edit'|trans }}
+                                    </a>
+                                    <a class="btn btn-info" href="{{ url('answer_delete', {id: answer.id}) }}" title="{{ 'label_answer_delete'|trans }}">
+                                        {{ 'label_answer_delete'|trans }}
+                                    </a>
+                                    <a class="btn btn-info" href="{{ url('answer_best', {id: answer.id}) }}" title="{{ 'label_answer_isBest'|trans }}">
+                                        {{ 'label_answer_isBest'|trans }}
+                                    </a>
+                                {% endif %}
+                            </td>
+
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+
+                {% for answer in answers %}
+                <tr>
+                    {% if answer.question.id == questions.id and answer.isBest == 0  %}
+                        <td>
+                            {{ answer.answertext }}
+                        </td>
+                        <td>
+                            {{ answer.nick }}
+                        </td>
+                        <td>
+                            {{ '' }}
+                        </td>
+                        <td>
+                            {% if is_granted ('ROLE_ADMIN') %}
+
+                            <a class="btn btn-info" href="{{ url('answer_edit', {id: answer.id}) }}" title="{{ 'label_answer_edit'|trans }}">
+                                {{ 'label_answer_edit'|trans }}
+                            </a>
+                            <a class="btn btn-info" href="{{ url('answer_delete', {id: answer.id}) }}" title="{{ 'label_answer_delete'|trans }}">
+                                {{ 'label_answer_delete'|trans }}
+                            </a>
+                            <a class="btn btn-info" href="{{ url('answer_best', {id: answer.id}) }}" title="{{ 'label_answer_isBest'|trans }}">
+                                {{ 'label_answer_isBest'|trans }}
+                            </a>
+
+                            {% endif %}
+                        </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
+
+        <p>
+
+            <button class="btn btn-outline-success" type="button" data-toggle="collapse" data-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">
+                {{ 'label_answer_create'|trans }}
+            </button>
+
+        <div id="collapseForm" class="collapse">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+
+            <div  class="float-sm-right p-3">
+                <input type="submit" value="{{ 'save'|trans }}" class="btn btn-info row">
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+        <p>
+            <a class="btn btn-info" href="{{ url('question_index') }}" title="{{ 'action_back_to_list'|trans }}">
+                {{ 'action_back_to_list'|trans }}
+            </a>
+        </p>
+        </div>
+
+    {% else %}
+        <p>
+            {{ 'message_item_not_found'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

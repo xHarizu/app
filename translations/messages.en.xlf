@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="label_question">
+                <source>label_question</source>
+                <target>Question</target>
+            </trans-unit>
+            <trans-unit id="label_questions_list">
+                <source>label_questions_list</source>
+                <target>Questions list</target>
+            </trans-unit>
+            <trans-unit id="label_subject">
+                <source>label_subject</source>
+                <target>Subject</target>
+            </trans-unit>
+            <trans-unit id="label_askedby">
+                <source>label_askedby</source>
+                <target>Asked by</target>
+            </trans-unit>
+
+            <trans-unit id="label_actions">
+                <source>label_actions</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="message_empty_list">
+                <source>message_empty_list</source>
+                <target>Empty list.</target>
+            </trans-unit>
+
+            <trans-unit id="label_answers">
+                <source>label_answers</source>
+                <target>Answers</target>
+            </trans-unit>
+            <trans-unit id="label_question_text">
+                <source>label_question_text</source>
+                <target>Text</target>
+            </trans-unit>
+            <trans-unit id="action_back_to_list">
+                <source>action_back_to_list</source>
+                <target>Back to list</target>
+            </trans-unit>
+            <trans-unit id="message_item_not_found">
+                <source>message_item_not_found</source>
+                <target>Question not found</target>
+            </trans-unit>
+            <trans-unit id="question_view">
+                <source>question_view</source>
+                <target>View</target>
+            </trans-unit>
+            <trans-unit id="action_view">
+                <source>action_view</source>
+                <target>View</target>
+            </trans-unit>
+
+            <trans-unit id="label_user_list">
+                <source>label_user_list</source>
+                <target>Users list</target>
+            </trans-unit>
+            <trans-unit id="label_user_id">
+                <source>label_user_id</source>
+                <target>User's ID</target>
+            </trans-unit>
+            <trans-unit id="label_email">
+                <source>label_email</source>
+                <target>E-mail</target>
+            </trans-unit>
+
+            <trans-unit id="label_asked_questions">
+                <source>label_asked_questions</source>
+                <target>Asked questions</target>
+            </trans-unit>
+            <trans-unit id="label_detail_users">
+                <source>label_detail_users</source>
+                <target>User's details</target>
+            </trans-unit>
+
+            <trans-unit id="title_question_create">
+                <source>title_question_create</source>
+                <target>Ask the question</target>
+            </trans-unit>
+                <trans-unit id="label_text">
+                <source>label_text</source>
+            <target>Question text</target>
+            </trans-unit>
+                <trans-unit id="action_logout">
+                <source>action_logout</source>
+            <target>Logout</target>
+            </trans-unit>
+                <trans-unit id="action_save">
+                <source>action_save</source>
+            <target>Save</target>
+            </trans-unit>
+
+            <trans-unit id="label_id">
+                <source>label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="label_created_at">
+                <source>label_created_at</source>
+                <target>Created at</target>
+            </trans-unit>
+            <trans-unit id="label_updated_at">
+                <source>label_updated_at</source>
+                <target>Updated at</target>
+            </trans-unit>
+            <trans-unit id="title_category_list">
+                <source>title_category_list</source>
+                <target>Category list</target>
+            </trans-unit>
+            <trans-unit id="label_title">
+                <source>label_title</source>
+                <target>Category name</target>
+            </trans-unit>
+            <trans-unit id="create_category">
+                <source>create_category</source>
+                <target>Create category</target>
+            </trans-unit>
+            <trans-unit id="category_create">
+                <source>category_create</source>
+                <target>Create category</target>
+            </trans-unit>
+            <trans-unit id="title_category_details">
+                <source>title_category_details</source>
+                <target>Category details</target>
+            </trans-unit>
+
+            <trans-unit id="action_login">
+                <source>action_login</source>
+                <target>LogIn</target>
+            </trans-unit>
+            <trans-unit id="title_category_create">
+                <source>title_category_create</source>
+                <target>Create category</target>
+            </trans-unit>
+            <trans-unit id="label_category">
+                <source>label_category</source>
+                <target>Category</target>
+            </trans-unit>
+
+            <trans-unit id="category_created_successfully">
+                <source>category_created_successfully</source>
+                <target>Category added</target>
+            </trans-unit>
+
+            <trans-unit id="action_create">
+                <source>action_create</source>
+                <target>Create</target>
+            </trans-unit>
+            <trans-unit id="action_delete">
+                <source>action_delete</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="action_edit">
+                <source>action_edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="label_questions_category">
+                <source>label_questions_category</source>
+                <target>Questions</target>
+            </trans-unit>
+            <trans-unit id="message_form_error">
+                <source>message_form_error</source>
+                <target>Form error</target>
+            </trans-unit>
+            <trans-unit id="title_task_details">
+                <source>title_task_details</source>
+                <target>Task details</target>
+            </trans-unit>
+
+            <trans-unit id="title_category_delete">
+                <source>title_category_delete</source>
+                <target>Delete category</target>
+            </trans-unit>
+            <trans-unit id="title_category_edit">
+                <source>title_category_edit</source>
+                <target>Edit category</target>
+            </trans-unit>
+            <trans-unit id="title_question_delete">
+                <source>title_question_delete</source>
+                <target>Delete question</target>
+            </trans-unit>
+
+            <trans-unit id="message_updated_successfully">
+                <source>message_updated_successfully</source>
+                <target>Updated Successfully</target>
+            </trans-unit>
+
+            <trans-unit id="title_answer_create">
+                <source>title_answer_create</source>
+                <target>Answer created</target>
+            </trans-unit>
+            <trans-unit id="title_answer_edit">
+                <source>title_answer_edit</source>
+                <target>Answer edited</target>
+            </trans-unit>
+            <trans-unit id="title_answers_list">
+                <source>title_answers_list</source>
+                <target>Answers list</target>
+            </trans-unit>
+            <trans-unit id="label_action">
+                <source>label_action</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="best_answer">
+                <source>best_answer</source>
+                <target>Best answer</target>
+            </trans-unit>
+            <trans-unit id="label_answer_edit">
+                <source>label_answer_edit</source>
+                <target>Edit answer</target>
+            </trans-unit>
+            <trans-unit id="create_answer">
+                <source>create_answer</source>
+                <target>Add answer</target>
+            </trans-unit>
+            <trans-unit id="title_user_edit">
+                <source>title_user_edit</source>
+                <target>Edit user's data</target>
+            </trans-unit>
+            <trans-unit id="title_question_edit">
+                <source>title_question_edit</source>
+                <target>Edit question</target>
+            </trans-unit>
+            <trans-unit id="edit_user">
+                <source>edit_user</source>
+                <target>Edit user</target>
+            </trans-unit>
+            <trans-unit id="menu_questions">
+                <source>menu_questions</source>
+                <target>Questions</target>
+            </trans-unit>
+            <trans-unit id="menu_categories">
+                <source>menu_categories</source>
+                <target>Categories</target>
+            </trans-unit>
+            <trans-unit id="menu_users">
+                <source>menu_users</source>
+                <target>Users</target>
+            </trans-unit>
+            <trans-unit id="answer_text">
+                <source>answer_text</source>
+                <target>Answer Text</target>
+            </trans-unit>
+            <trans-unit id="label_bestanswer">
+                <source>label_bestanswer</source>
+                <target>Best Answer</target>
+            </trans-unit>
+
+            <trans-unit id="message.deleted_successfully">
+                <source>message.deleted_successfully</source>
+                <target>Deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="label_homepage">
+                <source>label_homepage</source>
+                <target>Homepage</target>
+            </trans-unit>
+            <trans-unit id="label_question_create">
+                <source>label_question_create</source>
+                <target>Create question</target>
+            </trans-unit>
+            <trans-unit id="label_answer_create">
+                <source>label_answer_create</source>
+                <target>Add answer</target>
+            </trans-unit>
+            <trans-unit id="label_answer_delete">
+                <source>label_answer_delete</source>
+                <target>Delete</target>
+            </trans-unit>
+
+            <trans-unit id="title_answer_delete">
+                <source>title_answer_delete</source>
+                <target>Delete answer</target>
+            </trans-unit>
+            <trans-unit id="id">
+                <source>id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="label_question_subject">
+                <source>label_question_subject</source>
+                <target>Question subject</target>
+            </trans-unit>
+            <trans-unit id="label_category_show">
+                <source>label_category_show</source>
+                <target>Go to question</target>
+            </trans-unit>
+            <trans-unit id="label_answer_isBest">
+                <source>label_answer_isBest</source>
+                <target>Best Answer</target>
+            </trans-unit>
+            <trans-unit id="save">
+                <source>save</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="label_answertext">
+                <source>label_answertext</source>
+                <target>Answer Text</target>
+            </trans-unit>
+            <trans-unit id="label_nick">
+                <source>label_nick</source>
+                <target>Nick</target>
+            </trans-unit>
+
+            <trans-unit id="label_login">
+                <source>label_login</source>
+                <target>Log In</target>
+            </trans-unit>
+
+            <trans-unit id="label_isBest">
+                <source>label_isBest</source>
+                <target>Best Answer</target>
+            </trans-unit>
+
+            <trans-unit id="message_category_contains_tasks">
+                <source>message_category_contains_tasks</source>
+                <target>Category contains questions</target>
+            </trans-unit>
+
+            <trans-unit id="label_answeredby">
+                <source>label_answeredby</source>
+                <target>Answered by</target>
+            </trans-unit>
+
+            <trans-unit id="user_updated_successfully">
+                <source>user_updated_successfully</source>
+                <target>User's data updated successfully</target>
+            </trans-unit>
+
+            <trans-unit id="edit_data">
+                <source>edit_data</source>
+                <target>Edit data</target>
+            </trans-unit>
+
+            <trans-unit id="edit_password">
+                <source>edit_password</source>
+                <target>Edit Password</target>
+            </trans-unit>
+
+            <trans-unit id="label_current_password">
+                <source>label_current_password</source>
+                <target>Current password</target>
+            </trans-unit>
+
+            <trans-unit id="label_password">
+                <source>label_password</source>
+                <target>Password</target>
+            </trans-unit>
+
+            <trans-unit id="message.updated_successfully ">
+                <source>message.updated_successfully</source>
+                <target>Updated successfully</target>
+            </trans-unit>
+            <trans-unit id="label.password">
+                <source>label.password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="label.repeat_password">
+                <source>label.repeat_password</source>
+                <target>Repeat password</target>
+            </trans-unit>
+            <trans-unit id="title_password_edit">
+                <source>title_password_edit</source>
+                <target>Edit password</target>
+            </trans-unit>
+
+            <trans-unit id="edit_email">
+                <source>edit_email</source>
+                <target>Edit E-mail</target>
+            </trans-unit>
+
+            <trans-unit id="message_question_contains_answers">
+                <source>message_question_contains_answers</source>
+                <target>Question contains answers</target>
+            </trans-unit>
+
+            <trans-unit id="answer_updated_successfully">
+                <source>answer_updated_successfully</source>
+                <target>Edited</target>
+            </trans-unit>
+
+            <trans-unit id="text_homepage">
+                <source>text_homepage</source>
+                <target>Welcome in QA app</target>
+            </trans-unit>
+            <trans-unit id="text_hello">
+            <source>text_hello</source>
+            <target>Click on navbar to go to Questions or Categories or try to log in.</target>
+            </trans-unit>
+
+
+
+
+
+</body>
+</file>
+</xliff>
